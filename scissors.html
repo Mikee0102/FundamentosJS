@@ -93,6 +93,21 @@
             color: #5100ff;
             text-align: center;
         }
+        .botonreg {
+            margin-top: 20px; /* Espacio superior */
+            padding: 5px 10px; /* Tamaño del botón */
+            background-color: #43006c; /* Color de fondo */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cursor de puntero */
+            font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+            text-align: center; /* Alinear texto al centro */
+        }
+
+        .botonreg:hover {
+            background-color: #b035e5; /* Color al pasar el mouse */
+        }
     </style>
 </head>
 <body>
@@ -120,7 +135,7 @@
             <div id="result">Resultado</div>
         </div>
     </div>
-
+    <div class="botonreg" onclick="window.location.href = 'index.html'">Regresar</div>
     <script src="scissors.js"></script>
 
 </body>

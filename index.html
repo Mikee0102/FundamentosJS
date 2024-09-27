@@ -3,33 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos Javascript</title>
+    <title>Minimalist Menu</title>
     <style>
-        body{
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
-            padding: 0;
-            display: grid;
-            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            place-items: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        div{
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 1px solid rgb(3, 25, 54);
+        .parent {
             display: grid;
-            place-items: center;
-            color: aqua;
-            background-color: blueviolet;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            width: 500px;
+            height: 400px;
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .div1, .div2, .div3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .div1 { 
+            grid-area: 2 / 3 / 3 / 6; 
+            background-color: #5c5c5c;
+        }
+        .div2 { 
+            grid-area: 4 / 2 / 6 / 4; 
+            background-color: #4a4a4a;
+        }
+        .div3 { 
+            grid-area: 4 / 5 / 6 / 7; 
+            background-color: #4a4a4a;
+        }
+
+        /* Hover Effects */
+        .div1:hover {
+            background-color: #727272;
+        }
+        .div2:hover {
+            background-color: #6b6b6b;
+        }
+        .div3:hover {
+            background-color: #6b6b6b;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Bola Mágica</h1>
-    </div>
-    <script src="./app.js"></script>
+
+<div class="parent">
+    <div class="div1">Fundamentos Javascripst</div>
+    <div class="div2" onclick="goToMagicBall()">Magic Ball</div>
+    <div class="div3" onclick="goToScissors()">Rock, Paper, Scissors</div>
+</div>
+
+<script src="indexx.js"></script>
+
 </body>
 </html>
