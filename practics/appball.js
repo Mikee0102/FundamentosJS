@@ -31,3 +31,4 @@ const eightBall = () => {
             break;
     }
 }
+ball.addEventListener('click', eightBall);
